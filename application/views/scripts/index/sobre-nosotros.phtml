@@ -1,0 +1,137 @@
+ <fieldset id="center_wrapper">
+  <div id="body_wrapper">
+    <div class="body_heading">
+      <div class="heading_intro">
+        <h2><a href="#">We are pick</a></h2>
+        <p>Super awesome creative agency New York based</p>
+      </div>
+      <div class="right_button_holder"><a href="#" class="button_head">Contact Us</a></div>
+    </div>
+    <div class="body_contant">
+     
+      <div class="divider">
+        <div class="divider_text">
+          <h2 class="marnone">Latest Project of our work <span><a href="#">Go to portfolio!</a> </span></h2>
+        </div>
+        
+      </div>
+      <div class="latest_products">
+        <ul class="portfolio_contain gallery">
+       		<?php foreach($this->nosotros as $item): ?>
+       			<li data-id="id-2" data-type="webdesign" class="main one_fourth">
+			            <div class="project_box">
+			              <div class="rounded_image"> <img src="<?php echo $item["imagen"]?>"  class="squared_img" alt=""/><div class="holygen"> </div> </div>
+			              <div class="line"></div>
+			              <div class="project_description">
+			                <h2><a href="#"><?php echo $item["titulo"]?></a></h2>
+			                <p>contenido </p>
+			              </div>
+			              <div class="button_holder"><a href="#" class="button">Read More</a></div>
+			            </div>
+			      </li> 
+       		<?php endforeach; ?>
+          
+        </ul>
+      </div>
+      <div class="divider">
+        <div class="divider_text">
+          <h2>Latest Post from the Blog<span><a href="#">View More!</a> </span></h2>
+        </div>
+        
+      </div>
+      <div class="latest_posts">
+        
+       <?php foreach($this->nosotros as $item): ?>
+		        <div class="one_fourth project_box column-last">
+		          <div class="tumbnail-post">
+		            <div class="tumbnail_post_pic">
+		              <div class="kreis"> </div>
+		              <img src="<?php echo $item["imagen"]?>" alt=""> </div>
+		          </div>
+		          
+		          <div class="project_description">
+		            <h2><a href="#"><?php echo $item["titulo"]?></a></h2>
+		            <p><?php echo $item["contenido"]?> </p>
+		          </div>
+		          <div class="button_holder"><a href="#" class="button">Read More</a></div>
+		        </div>
+		<?php endforeach;?>
+      </div>
+      <div class="bottom_wrapper">
+        <div class="one_fourth choose">
+          <div class="bottom_wrapper_heading">
+            <div class="divider_text">
+              <h2 class="marnone">WHY CHOOSE US?</h2>
+            </div>
+            <div class="line_min1"></div>
+          </div>
+          <div id="accordion">
+            <h3><a href="#">Business Interactive</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+            <h3><a href="#">Testing Mind</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+            <h3><a href="#">Analytics & measurement</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+            <h3><a href="#">Consumer Research</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+            <h3><a href="#">Prototyping</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+            <h3><a href="#">Lorem Ispum</a></h3>
+            <div>
+              <p> Cum sociis natoque penatibus 
+                Doles sociis natoque montes.</p>
+            </div>
+          </div>
+        </div>
+        <div class="one_half w100">
+          <div class="bottom_wrapper_heading">
+            <div class="divider_text">
+              <h2 class="marnone">Our Clients</h2>
+            </div>
+            <div class="line_min1"></div>
+          </div>
+          <ul class="client">
+            <li><a href="#" class="client1"></a> </li>
+            <li><a href="#" class="client2"></a> </li>
+            <li><a href="#" class="client3"></a> </li>
+            <li><a href="#" class="client4"></a> </li>
+            <li><a href="#" class="client5"></a> </li>
+            <li><a href="#" class="client6"></a> </li>
+          </ul>
+        </div>
+        <div class="one_fourth column-last">
+          <div class="bottom_wrapper_heading">
+            <div class="divider_text">
+              <h2 class="marnone">TESTIMONIALS</h2>
+            </div>
+            <div class="line_min1"></div>
+          </div>
+          <div class="contant_right">
+            <div class="intro">
+              <div class="details"><img src="images/quotes.png" alt=""/> Lorem ipsum dolor sit amet, consetet
+                edolor sit amet. Lorem ipsum dolor sit amet, 
+                consetetur sadipscing elitr, sed diam nonumy
+                tempor invidunt ut labore et dolore magna. </div>
+              <div class="name"><a>John Doe</a>(Java Developer)</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </fieldset>

@@ -1,0 +1,120 @@
+<script type="text/javascript" >
+	function enviarEmailContacto(){
+	
+		nombre = $("#form_contacto #nombre").val();
+		email = $("#form_contacto #email").val();
+		mensaje = $("#form_contacto #mensaje").val();
+		if(nombre !="" && email !="" && mensaje!="")
+		{
+		
+			
+			datos  = $("#form_contacto").serialize();
+			var request = $.ajax({
+				  url: URL_PATH + "/index/enviar-email/format/json/",
+				  type: "POST",
+				  data:datos,
+				  dataType: "json"
+				});
+			$("#respuesta_email").removeClass();
+			$("#respuesta_email").addClass("notification notice  closeable");
+			$("#respuesta_email").text("Enviado...");
+			request.done(function(msg) {
+				$("#respuesta_email").removeClass();
+				$("#respuesta_email").addClass("notification "+msg.alerta+" closeable");
+				$("#respuesta_email").text(msg.mensaje);
+				  
+			});
+
+		}else{
+
+			$("#respuesta_email").removeClass();
+			$("#respuesta_email").addClass("notification error closeable");
+			$("#respuesta_email").text("Favor de llenar todos los campos");
+
+
+		}
+		
+		
+	}
+	
+
+</script>
+
+<!--Title Section Start-->
+  <div id="title">
+    <div class="title-inner">
+      <h2><?php echo $this->translate->_("contacto");?></h2>
+      <div class="page"> <?php echo $this->translate->_("usted_esta_aqui"); ?> <a href="#">Home</a> <span>&rarr;</span> <a href="#"><?php echo $this->translate->_("Contacto");?></a></div>
+    </div>
+  </div>
+  <div class="map">
+    <div class="w960">
+      <p class="borbot"><strong><?php echo $this->translate->_("nos_encanta_escuchar_de_usted");?></strong> </p>
+    </div>
+    <iframe width="100%" height="300" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com.mx/maps/ms?ie=UTF8&amp;t=h&amp;oe=UTF8&amp;msa=0&amp;msid=202970670894306901076.0004c24ce724b96ad8b5e&amp;ll=20.687366,-103.429123&amp;spn=0,0&amp;iwloc=0004c24cee58342704080&amp;output=embed"></iframe>
+
+    <br />
+    <small></small> </div>
+  <!--Middle Section Start-->
+  <fieldset id="center_wrapper">
+  <div id="body_wrapper">
+    <div class="top_container full-width column-last">
+      <div class="top_container three_fifth ">
+        <h3 class="bor-bot"><?php echo $this->translate->_("por_ahora_vamos_a_hablar")?></h3>
+    	<form method="post" id="form_contacto" action="<?php echo  $this->myUrl(false);?>/index/contacto" >
+    		    <ul class="cont-frm">
+          <li class="wsmall">
+            <label><?php echo $this->translate->_("nombre");?> <span>(required)</span> </label>
+            <input name="nombre" id="nombre" type="text" required />
+          </li>
+          <li class="wsmall">
+            <label>Email <span>(required)</span> </label>
+            <input name="email" id="email"  type="text" required  />
+          </li>
+          <li class="wsmall">
+            <label> <?php echo $this->translate->_("sitio_web");?> </label>
+            <input name="sitio_web" id="sitio_web" type="text" />
+          </li>
+          <li >
+            <label><?php echo $this->translate->_("su_mensaje");?> <span>(required)</span> </label>
+            <textarea cols=""  name="mensaje" id="mensaje" rows="10" class="txtarea" ></textarea>
+          </li>
+          <li>
+            <div class="read_more_button"><a  onclick="enviarEmailContacto();" class="button" style="padding-left:20px; padding-right:20px;">Send</a></div>
+          </li>
+          <li>
+          	<div id="respuesta_email"   style="margin:10px 0px 10px 0px;" ></div>
+          </li>
+        </ul>
+    	
+    	</form>
+      </div>
+     <!-- 
+      <div class="one_third column-last">
+        <h3 class="bor-bot">contact us 24/7</h3>
+        <p> Lorem ipsum dolor sit amet, consectetuer adipiscing 
+          elit. Aenean commodo ligula eget dolor. Aenean massa. 
+          Cum sociis natoque penatibus et magnis dis parturient 
+          montes, nascetur ridiculus mus. Donec quam felis, 
+          ultricies nec, pellentesque eu, pretium quis, sem. 
+          Nulla consequat massa quis enim. Donec pede justo,
+          ringilla vel, aliquet nec, vulputate eget, arcu. In enim
+          usto, rhoncus ut, imperdiet a, venenatis vitae, justo. 
+          Nullam dictum felis eu pede mollis pretium. Integer 
+          tincidunt. Cras dapibus. Aenean massa. 
+          Cum sociis natoque penatibus et magnis dis parturient
+          montes, nascetur ridiculus mus. Donec quam felis.</p>
+      </div>
+     -->
+      <div class="one_third column-last ">
+        <h3 class="bor-bot"><?php echo $this->translate->_("datos_de_contacto")?></h3>
+        <ul class="leftmenu nobor">
+          <li><strong><?php echo $this->translate->_("telefono");?>:</strong> <span>01 (33) 33 35 12 98/ 99</span></li>
+          <li><strong><?php echo $this->translate->_("direccion");?>:</strong> <span>Luigi Pirandello 5593 Col Vallarta Universidad, Zapopan, Jalisco, CP 45110</span></li>
+          <li><strong><?php echo $this->translate->_("email");?>:</strong> <span>sistemas@witenconsulting.com</span></li>
+         
+        </ul>
+      </div>
+    </div>
+  </div>
+  </fieldset>

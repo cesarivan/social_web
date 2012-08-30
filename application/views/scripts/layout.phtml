@@ -1,0 +1,272 @@
+<?php 
+$traductor = $this->translate;
+
+?>
+<!DOCTYPE html>
+<html lang="es_ES" >
+<head>
+<meta charset="UTF-8" />
+<title>Pick - Responsive Theme</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<link rel="stylesheet" href="<?php echo $this->myUrl(false);?>/css/style.css" />
+<link href="<?php echo $this->myUrl(false);?>/css/responsive.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" href="<?php echo $this->myUrl(false);?>/css/superfish.css" />
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/jquery.js" ></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/hoverIntent.min.js" ></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/superfish.js" ></script>
+
+<!--For Asyncslider-->
+<script type='text/javascript'>jQuery.noConflict()(function(){
+	// Setup Slider
+	jQuery(".my_asyncslider").asyncSlider({autoswitch: 5 * 1000});
+
+});
+</script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/jquery.min.js"></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/superfish.js"></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/jquery.easing.1.3.js"></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/jquery.asyncslider.js"></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/customss.js"></script>
+<!--Accordian-->
+<script type='text/javascript' src='<?php echo $this->myUrl(false);?>/js/jquery-ui-1.8.5.custom.min.js'></script>
+<script type='text/javascript'>
+  var URL_PATH = '<?php echo $this->myUrl(false); ?>';
+  $(document).ready(function() {
+	 
+
+    $("#accordion").accordion();
+  });
+ 
+  </script>
+
+<!--Menu Anim-->
+<script type='text/javascript' src='<?php echo $this->myUrl(false);?>/js/jquery.custom.js?ver=1.0'></script>
+<script type="text/javascript" src="<?php echo $this->myUrl(false);?>/js/jquery.tweet.js" ></script>
+</head>
+<body>
+<div id="top_line"></div>
+<div id="Container">
+  <fieldset id="Navigation">
+  <div id="company480">
+    <div id="logo1"><img src="<?php echo $this->myUrl(false);?>/images/logo.png" title="logo" alt="" /></div>
+    <div id="slogan1">Responsive Theme By ThemeProfuse</div>
+  </div>
+  <div class="social_media_wrapper">
+    <div class="contact_info"><span>Support Hotline: </span>
+      <label>(+1)343 358 356</label>
+    </div>
+    <div class="search_box">
+      <input type="text" name="search" value="" placeholder="Search Site..."/>
+      <input type="submit" value="" name="submit" />
+    </div>
+    <div class="social_media">
+      <ul class="social">
+        <li class="slogo"> <a href="#"> </a></li>
+        <li class="facebook"> <a href="#"> </a> </li>
+        <li class="googlePlus"> <a href="#"> </a></li>
+        <li class="Rss"> <a href="#"> </a></li>
+        <li class="power"><a href="#"> </a> </li>
+      </ul>
+    </div>
+  </div>
+  <div id="menu_container">
+    <div id="company">
+      <div id="logo"><img src="<?php echo $this->myUrl(false);?>/images/logo.png" title="logo" /></div>
+      <div id="slogan">Responsive Theme By ThemeProfuse</div>
+    </div>
+    
+	<div class="iphon-menu">
+      <select name="forma" ONCHANGE="location = this.options[this.selectedIndex].value;">
+        <option selected="" value="" >Navigate...</option>
+		<option value="" ><?php echo $this->translate->_("nav_inicio")?></option>
+		<option value="" ><?php echo $this->translate->_("nav_servicios")?></option>
+		<option value="" ><?php echo $this->translate->_("nav_sobre_nosotros")?></option>
+		<option value="" ><?php echo $this->translate->_("nav_ventajas")?></option>
+		<option value="" ><?php echo $this->translate->_("nav_contacto")?></option>
+      </select>
+    </div>
+    <div id="menu">
+      <div id="primary-nav">
+        <ul id="menu-primary-menu" class="sf-menu">
+          <li><a href="<?php echo $this->myUrl(false);?>"><?php echo $this->translate->_("nav_inicio")?></a>
+            <ul class="sub-menu homeop">
+       		  <li><a href="index.html">Home Layout1  - Async Slider</a></li>
+              <li><a href="index-2.html">Home Layout2  - Navio Slider</a></li>
+              <li><a href="index-3.html">Home Layout3 - Flexslider Slider</a></li>
+              <li><a href="index-4.html">Home Layout4 - Cycle Slider</a></li>
+            </ul>
+          </li>
+          <li><a href="about.html"><?php echo $this->translate->_("nav_servicios")?></a></li>
+          <li><a href="index.html"><?php echo $this->translate->_("nav_sobre_nosotros")?></a>
+            <ul class="sub-menu">
+              <li><a href="#">Portfolio 2 Columns</a>
+                <ul class="sub-menu">
+                  <li><a href="portfoli2columns.html">Portfolio 2 Columns</a></li>
+                  <li><a href="portfolio2columns-leftsidebar.html">Left Sidebar</a></li>
+                  <li><a href="portfolio2columns-rightsidebar.html">Right Sidebar</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Portfolio 3 Columns</a>
+                <ul class="sub-menu">
+                  <li><a href="portfoli3columns.html">Portfolio 3 Columns</a></li>
+                  <li><a href="portfolio3columns-leftsidebar.html">Left Sidebar</a></li>
+                  <li><a href="portfolio3columns-rightsidebar.html">Right Sidebar</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Portfolio 4 Columns</a>
+                <ul class="sub-menu">
+                  <li><a href="portfoli4columns.html">Portfolio 4 Columns</a></li>
+                  <li><a href="portfolio4columns-leftsidebar.html">Left Sidebar</a></li>
+                  <li><a href="portfolio4columns-rightsidebar.html">Right Sidebar</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Portfolio (no ajax)</a>
+                <ul class="sub-menu">
+                  <li><a href="portfoli2columns-simple.html">Portfolio 2 Columns</a></li>
+                  <li><a href="portfoli3columns-simple.html">Portfolio 3 Columns</a></li>
+                  <li><a href="portfoli4columns-simple.html">Portfolio 4 Columns</a></li>
+                </ul>
+              </li>
+              <li><a href="post-with-video.htm">Post With Video</a></li>
+              <li><a href="post-with-photo.html">Post With Photo</a></li>
+              <li><a href="post-with-slider.html">Post With Slider</a></li>
+            </ul>
+          </li>
+          <li><a href="#"><?php echo $this->translate->_("nav_ventajas")?></a>
+            <ul class="sub-menu">
+              <li><a href="blog-full-both-sidebar.html">Full Both Sidebar</a></li>
+              <li><a href="blog-full-left-sidebar.html">Full Left Sidebar</a></li>
+              <li><a href="blog-full-right-sidebar.html">Full Right Sidebar</a></li>
+              <li><a href="blog-full-width.html">Full Width</a></li>
+              <li><a href="blog-medium-left-sidebar.html">Medium Left Sidebar</a></li>
+              <li><a href="blog-medium-right-sidebar.html">Medium Right Sidebar</a></li>
+              <li><a href="#">Single Blog</a>
+                <ul class="sub-menu">
+                  <li><a href="single-blog-both-sidebar.html">Both Sidebar</a></li>
+                  <li><a href="single-blog-leftsidebar.html">Left Sidebar</a></li>
+                  <li><a href="single-blog-rightsidebar.html">Right Sidebar</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a href="contact-us.html"><?php echo $this->translate->_("nav_contacto");?></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  </fieldset>
+
+  <?php echo $this->layout()->content; ?>
+  
+</div>
+<fieldset id="footer">
+<div id="footer_wrapper">
+  <div class="one_third w100">
+    <div class="bottom_wrapper_heading">
+      <div class="divider_text">
+        <h2>ABOUT THE PICK</h2>
+      </div>
+      <div class="line_min"></div>
+    </div>
+    <p class="w90">Super awesome creative agency <a href="#">New York</a> based.
+      A beautiful, minimalistic, content-focused portfolio theme. 
+      No gimmicks, no tack, just your work presented in a 
+      professional manner.Just simple and very beauty.
+      Options, widgets, sliders, portfolio management... 
+      all the good stuff! </p>
+    <div class="bottom_wrapper_heading bottom_mar">
+      <div class="divider_text ">
+        <h2><?php echo $this->translate->_("contacto");?></h2>
+      </div>
+      <div class="line_min"></div>
+    </div>
+    <div><img src="<?php echo $this->myUrl(false);?>/images/contact.png" alt="" class="flleft">
+      <div class="contactinfo">
+        <ul>
+          <li><span><?php echo $this->translate->_("direccion");?> :</span> Via Ferrati 1258, Torino, Italy </li>
+          <li><span>Support Hotline:</span> (+1) 343 456 7891 </li>
+          <li><span>E-mail:</span> <a href="#">yourcompany@pick.com</a> </li>
+          <li><span>Website: </span><a href="#">www.yourcompany.com </a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="one_half w100">
+    <div class="bottom_wrapper_heading">
+      <div class="divider_text">
+        <h2>TWITER WIDGET</h2>
+      </div>
+      <div class="line_min"></div>
+    </div>
+    <div class="twitterbx">
+      <div class="twit-thumb"><img src="<?php echo $this->myUrl(false);?>/images/twitter-thumb.png" alt=""> </div>
+      <div class="twit-des"> Here we go: Most flexible theme I 
+        have ever built, called 
+        Pick: <a href="#">http://t.co/paheUnzX</a> - up 
+        next: mass theme updates ;D <span>June 19, 2012 - 8:03 pm</span> </div>
+    </div>
+   
+<script type="text/javascript" >
+$(document).ready(function(){
+
+	 $(".tweet").tweet({
+         username: "witensports",
+         page: 1,
+         avatar_size: 32,
+         count: 20,
+         loading_text: "loading ..."
+       }).bind("loaded", function() {
+         var ul = $(this).find(".tweet_list");
+         var ticker = function() {
+           setTimeout(function() {
+             ul.find('li:first').animate( {marginTop: '-4em'}, 500, function() {
+               $(this).detach().appendTo(ul).removeAttr('style');
+             });
+             ticker();
+           }, 5000);
+         };
+         ticker();
+     });
+
+	 
+	
+});
+</script>
+   
+   <div class="tweet"></div>
+   
+   
+   
+  </div>
+  <div class="one_fourth column-last w100">
+    <div class="bottom_wrapper_heading">
+      <div class="divider_text">
+        <h2>STAY IN TOUCH</h2>
+      </div>
+      <div class="line_min"></div>
+    </div>
+    <ul class="news">
+      <li> Enter Your Personal Information!</li>
+      <li>
+        <input type="text" name="search" value="" placeholder="Search Site..."/>
+      </li>
+      <li>
+        <input name="" type="submit" value="Sign Up">
+      </li>
+    </ul>
+    <ul class="socialf">
+      <li> <a href="#" class="twitter">153</a></li>
+      <li> <a href="#" class="gplus">153</a></li>
+      <li> <a href="#" class="rssf">153</a></li>
+    </ul>
+  </div>
+</div>
+</fieldset>
+<div id="footer-info">
+  <div id="footer-info-inn">
+    <div class="flleft"> &copy; Derechos reservados WitenSports.com</div>
+    <div class="flright"> You can find us around <a href="#">Twitter</a>, <a href="#">Dribbble</a> & <a href="#">Pinterest</a> </div>
+  </div>
+</div>
+</body>
+</html>

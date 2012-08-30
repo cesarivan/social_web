@@ -1,0 +1,86 @@
+/********* TOP NAV ********/
+#primary-nav{ float:right; margin:0;  font-weight:normal; }
+#primary-nav ul{margin:0; padding:0; list-style:none; line-height:25px}
+#primary-nav ul a{display:block; position:relative}
+#primary-nav li a.sf-with-ul{padding-right:18px}
+#primary-nav li li a.sf-with-ul{padding-right:0}
+#primary-nav ul li{float:left; position:relative; z-index:40;}
+#primary-nav ul li:hover{visibility:inherit; /* fixes IE7 'sticky bug' */ background: repeat-x scroll 0 0 transparent}
+#primary-nav ul ul{position:absolute; top:-9999em; width:180px; /* left offset of submenus need to match (see below) */}
+#primary-nav ul ul li{width:100%}
+
+/*  Make sub menus appear */
+#primary-nav ul li:hover ul, 
+#primary-nav ul li.sfHover ul{ left: 4px;
+    top: 26px;
+    z-index: 589;}
+
+/* Hide all subs subs (4 levels deep) */
+#primary-nav ul li:hover li ul, 
+#primary-nav ul li.sfHover li ul, 
+#primary-nav ul li li:hover li ul, 
+#primary-nav ul li li.sfHover li ul, 
+#primary-nav ul li li li:hover li ul, 
+#primary-nav ul li li li.sfHover li ul{top:-9999em}
+
+/* Displays all subs subs (4 levels deep) */
+#primary-nav ul li li:hover ul, 
+#primary-nav ul li li.sfHover ul, 
+#primary-nav ul li li li:hover ul, 
+#primary-nav ul li li li.sfHover ul, 
+#primary-nav ul li li li li:hover ul, 
+#primary-nav ul li li li li.sfHover ul{left:188px; /* match .nav ul width */top:9px}
+#primary-nav ul li.current-menu-item ul a{background:none !important}
+
+/* top level skin */
+#primary-nav ul a{ float:left; font-size:12px;  padding:0.75em 1.4em; font-weight:bold;}
+#primary-nav ul ul a{float:none}
+#primary-nav ul a:hover, 
+#primary-nav ul li.sfHover a, 
+#primary-nav ul li.current-cat a, 
+#primary-nav ul li.current_page_item a, 
+#primary-nav ul li.current-menu-item a{text-decoration:none}
+
+/* 2nd level skin */
+#primary-nav ul ul{padding:0 0 0 0; margin:12px 0 0 0; width:140px;  border-bottom: 4px solid #E4593A; box-shadow: 1px 1px 4px #999}
+.tz-light #primary-nav ul ul{margin:16px 0 0 0}
+
+/* 3nd level skin */
+.tz-light #primary-nav ul ul ul, 
+#primary-nav ul ul ul{padding:0; margin:-9px 0 0 -37px; width:140px}
+#primary-nav ul ul li{ float:none; background:none;border-bottom: 1px solid #E5E3E3;}
+#primary-nav ul ul li:hover{background:none}
+#primary-nav ul ul li:last-child{padding-bottom:1px}
+#primary-nav ul ul li:last-child a, #primary-nav ul .sub-menu li:last-child a{background:none !important}
+#primary-nav ul ul li a{line-height:25px; height:25px; font-size:12px; text-shadow:none}
+#primary-nav ul ul li a:hover{padding-left:10px}
+#primary-nav a .sf-sub-indicator{width:9px; height:6px; text-indent:-9999px; position:absolute; margin:12px 0 0 5px; right:5px; top:1px}
+#primary-nav li.current-menu-parent a{padding-right:18px}
+#primary-nav li li a .sf-sub-indicator{width:3px; margin-top:11px; right:10px}
+.ie7 #primary-nav li li a .sf-sub-indicator{width:3px; right:10px; margin-top:5px}
+.ie7 #primary-nav li li.sfHover{margin-bottom:-3px}
+#primary-nav li li a .sf-sub-indicator:last-child{display:none}
+#primary-nav ul li li.current-menu-item a{background:none}
+#primary-nav ul li.sfHover ul a{}
+#primary-nav ul li.sfHover ul a:hover{}
+#primary-nav ul a{-webkit-transition:all 0s linear; -moz-transition:all 0s linear; -o-transition:all 0.3s linear; -transition:all 0s linear; color:#333333; margin-bottom:0px; text-decoration:none;}
+#primary-nav ul a:hover, 
+#primary-nav ul li.current-menu-item a{-moz-transition:all 0s linear 0s; background:#fff;        color:#999999 !important;    }
+#primary-nav ul ul{width:			10em  !important; /* left offset of submenus need to match (see below) */
+    border-bottom: 4px solid #E4593A; box-shadow: 1px 1px 4px #999;
+    background: #ffffff; padding:0 9px;
+	  }
+#primary-nav ul ul.homeop{ width:12.5em !important;}
+#primary-nav ul ul li.sfHover ul a, 
+#primary-nav ul ul a{color:#7c7c7c}
+#primary-nav ul ul li.sfHover ul a:hover, 
+#primary-nav ul li li.sfHover a, 
+#primary-nav ul ul a:hover{color:#404040; -webkit-box-shadow:inset 0 0px 0px 0px rgba(29,31,36,0.6); -moz-box-shadow:inset 0 0px 0px 0px rgba(29,31,36,0.6); box-shadow:inset 0 0px 0px 0px rgba(29,31,36,0.6); background: transparent; border-bottom:0px solid #42454d}
+#primary-nav ul li a .sf-sub-indicator{}
+#primary-nav ul li li a .sf-sub-indicator{}
+#primary-nav ul li li a:hover .sf-sub-indicator, 
+#primary-nav ul li li.sfHover a .sf-sub-indicator{}
+#primary-nav ul .sub-menu a, #primary-nav ul .sub-menu ul  a{margin:0 10px; color:#666;font-weight:normal; font-size:11px; padding:2px; -webkit-transition:all 0.3s linear; -moz-transition:all 0.3s linear; -o-transition:all 0.3s linear; transition:all 0.3s linear;}
+#primary-nav ul li:last-child a {
+    padding-right: 6px;
+} 

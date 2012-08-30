@@ -1,0 +1,16 @@
+
+#slider {margin: 0 0 10px!important;}
+#carousel li {margin-right: 5px;}
+#carousel img {display: block; opacity: .5; cursor: pointer;}
+#carousel img:hover {opacity: 1;}
+#carousel .flex-active-slide img {opacity: 1; cursor: default;}
+
+.slider{ overflow:hidden;} 
+.nivo-html-caption{ position:absolute; display:none;}
+.slider-wrapper {
+    border-bottom: 15px solid #EDEBEB;
+    margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}

@@ -1,0 +1,142 @@
+/*
+Skin Name: Nivo Slider Default Theme
+Skin URI: http://nivo.dev7studios.com
+Skin Type: flexible
+Description: The default skin for the Nivo Slider.
+Version: 1.2
+Author: Gilbert Pellegrom
+Author URI: http://dev7studios.com
+*/
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(images/loading.gif) no-repeat 50% 50%;
+    margin-bottom:50px;
+	max-height:329px;
+    
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+	max-height:329px;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	bottom: 34px;
+    padding: 20px 0;
+    position: absolute;
+    right: 200px;
+    text-align: center;
+    z-index: 10000;
+}
+.theme-default .nivo-controlNav a {
+	display:inline-block;
+	width:49px;
+	height:63px;
+	background:url(../images/bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:49px;
+	height:63px;
+	background:url(../images/arrows.png) no-repeat;
+	text-indent:-9998px;
+	border:0;
+	
+}
+.theme-default .nivo-directionNav a:hover{background:url(../images/arrows-hvr.png) no-repeat;}
+.theme-default a.nivo-nextNav,.theme-default a.nivo-nextNav:hover {
+	background-position:-66px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+
+}
+
+.theme-default .nivo-controlNav { height:20px; padding:0px;}
+.theme-default .nivo-controlNav a.nivo-control{ width:22px; height:22px;}
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}
+
+/*=================================*/
+/* Nivo Slider Demo
+/* November 2010
+/* By: Gilbert Pellegrom
+/* http://dev7studios.com
+/*=================================*/
+ 
+
+#dev7link {
+    position:absolute;
+    top:0;
+    left:50px;
+    background:url(images/dev7logo.html) no-repeat;
+    width:60px;
+    height:67px;
+    border:0;
+    display:block;
+    text-indent:-9999px;
+}
+
+.slider-wrapper { 
+	margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+	 border-bottom: 15px solid #EDEBEB;
+	
+}
+
+.theme-default #slider {
+    margin:0px auto 0 auto;
+	float:left;
+ 
+}
+.theme-pascal.slider-wrapper,
+.theme-orman.slider-wrapper {
+    margin-top:150px;
+}
+
+/*====================*/
+/*=== Other Styles ===*/
+/*====================*/
+.clear {
+	clear:both;
+}
