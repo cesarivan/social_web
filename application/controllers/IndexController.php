@@ -5,11 +5,21 @@ class IndexController extends Zend_Controller_Action
 	
 	public function preDispatch()
 	{
+		$request = $this->_request;
+    	$translate = new Zend_Translate("array",APPLICATION_PATH."/configs/lenguajes/en.php","en");
+    	$translate->setLocale("en");
+    	 if($this->_request->lang=="es"){
+
+    		$translate->addTranslation( APPLICATION_PATH."/configs/lenguajes/es.php", "es");
+    		
+
+    	}
+    	$this->view->translate = $translate;
 		$this->_helper->contextSwitch()->addActionContext("enviar-email","json")->initContext();
 		$ajaxContext = $this->_helper->getHelper("AjaxContext");
 		$ajaxContext->addActionContext("enviar-email","json")->initContext();
 		
-		
+	
 	}
     public function init()
     {
@@ -72,10 +82,7 @@ class IndexController extends Zend_Controller_Action
     }
     public function contactoAction()
     {
-    	$request = $this->_request;
-    	$translate = new Zend_Translate("array",APPLICATION_PATH."/configs/lenguajes/es.php","es");
-    	$translate->setLocale("es");
-    	$this->view->translate = $translate;
+    
     	
     	
     }

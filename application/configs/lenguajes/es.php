@@ -17,3 +17,6 @@ return array(
 			"por_ahora_vamos_a_hablar" => "Por ahora vamos a hablar",
 			"direccion"=>"Direccion"
 		);
+
+
+

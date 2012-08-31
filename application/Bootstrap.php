@@ -8,16 +8,21 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$front = Zend_Controller_Front::getInstance();
 		$actualRouter = $front->getRouter();
 		$contacto = new Zend_Controller_Router_Route(
-				'contacto/',
+				'contacto/:lang',
 				array(
 						"controller" =>"index",
-						"action" => "contacto"
+						"action" => "contacto",
+						"lang" => ":lang"
 				)
 		);
 		$actualRouter->addRoute("contacto",$contacto);
-		
-		
-		
+
+	}
+
+	function _initTranslate(){
+
+
+
 	}
 
 }
